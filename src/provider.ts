@@ -7,6 +7,7 @@ import { hash } from 'ohash'
 import type { InputProvider, ImageModuleProvider, ProviderSetup } from './types'
 import type { ModuleOptions } from './module'
 import { ipxSetup } from './ipx'
+import { imgproxySetup } from './imgproxy'
 
 const BuiltInProviders = [
   'cloudflare',
@@ -18,6 +19,7 @@ const BuiltInProviders = [
   'imagekit',
   'gumlet',
   'imgix',
+  'imgproxy',
   'ipx',
   'netlify',
   'layer0',
@@ -36,6 +38,9 @@ export const providerSetup: Record<string, ProviderSetup> = {
   // IPX
   ipx: ipxSetup,
   static: ipxSetup,
+
+  // imgproxy
+  imgproxy: imgproxySetup,
 
   // https://vercel.com/docs/more/adding-your-framework#images
   vercel (_providerOptions, moduleOptions, nuxt: Nuxt) {

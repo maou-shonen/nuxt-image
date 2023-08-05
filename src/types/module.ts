@@ -1,6 +1,9 @@
 import type { IPXOptions } from 'ipx'
 import type { ModuleOptions } from '../module'
+import type { ImgproxyOptions } from '../imgproxy'
 import type { ImageModifiers } from './image'
+
+export type BinaryString = `${BufferEncoding}:${string}`
 
 // eslint-disable-next-line no-use-before-define
 export type ProviderSetup = (providerOptions: ImageModuleProvider, moduleOptions: ModuleOptions, nuxt: any)
@@ -58,6 +61,7 @@ export interface ImageProviders {
   storyblok?: any,
   strapi?: any,
   imageengine?: any,
+  imgproxy?: Partial<ImgproxyOptions>
   ipx?: Partial<IPXOptions>
   static?: Partial<IPXOptions>
 }

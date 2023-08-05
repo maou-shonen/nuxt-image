@@ -196,6 +196,22 @@ export const providers: Provider[] = [
       }
     ]
   },
+  // imgproxy
+  {
+    name: 'imgproxy',
+    samples: [
+      {
+        src: 'https://picsum.photos/300',
+        width: 100,
+        height: 100
+      },
+      {
+        src: 'https://picsum.photos/300.jpg',
+        width: 100,
+        height: 100
+      }
+    ]
+  },
   // imageengine
   {
     name: 'imageengine',

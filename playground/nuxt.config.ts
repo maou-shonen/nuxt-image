@@ -46,6 +46,9 @@ export default defineNuxtConfig({
     imgix: {
       baseURL: 'https://assets.imgix.net'
     },
+    imgproxy: {
+      baseURL: 'http://localhost:8080'
+    },
     imagekit: {
       baseURL: 'https://ik.imagekit.io/demo'
     },
